@@ -10,18 +10,14 @@ public class StudentTest {
         /*std1이라는 변수를 정하면 스택에는 std1이라는 변수가 생성되고 힙메모리에는 chapter6 클래스의 값들이 저장된다.*/
         /*호출 시 힙메모리의 주소를 스택의 변수가 가리키면서 다양한 호출이 가능하다.*/
 
-        chapter6 std2 = new chapter6();
-        std2.studentName = "잉잉이";
-        std2.studentNum = 45678910;
+        chapter6 std2 = new chapter6(123, "잉잉이", 456, "잉잉동 잉잉길");
         std2.showINfo();
-        System.out.println(std2); /*변수가 가리키는 힙메모리 주소값 호출*/
+        System.out.println(std1); /*변수가 가리키는 힙메모리 주소값 호출*/
         System.out.println("\n");
 
         /*get메서드 사용결과*/
 
         System.out.println(std1.getStudentName()); 
         System.out.println(std1.getStudentNum());
-        System.out.println(std2.getStudentName());
-        System.out.println(std2.getStudentNum());
     }
 }
