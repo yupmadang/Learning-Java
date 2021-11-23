@@ -51,6 +51,6 @@ public class chapter6 {
     }
 
     public void showINfo(){
-        System.out.println(studentName+ "," +studentNum+ "\n" +studentID+","+address);
+        System.out.println(studentName+ "," +studentNum+ "\n" +studentID+address);
     }
 }

@@ -18,6 +18,11 @@ public class Student {
         this.money-=1500;
     }
 
+    public void takeTexi(Texi texi){
+        texi.take(3300);
+        this.money -= 3300;
+    }
+
     public void showInfo(){
         System.out.println(stdName + "에게 남은 돈은 "+ money + "입니다.");
     }
