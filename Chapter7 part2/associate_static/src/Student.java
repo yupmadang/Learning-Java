@@ -33,6 +33,6 @@ public class Student {
         System.out.println("학생이름: "+stdName);
         System.out.println("학번: "+ getSerialNum());
         System.out.println("학년: "+ grade);
-
+        System.out.println("학생카드번호: "+StudentCard.getCardNum());/*클래스를 참조하여 카드번호를 반환하는 코드*/
     }
 }
