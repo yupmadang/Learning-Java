@@ -10,32 +10,39 @@ public class App {
         bookShelf1[3] = new Book("잉잉이", "잉잉이");
         bookShelf1[4] = new Book("잉잉이", "잉잉이");
 
-        System.arraycopy(bookShelf1, 0, bookShelf2, 0, 5);
+        bookShelf2[0] = new Book(); /*디폴트 생성자로 새로운 인스턴스 형성 bookShelf1의 주소 값과는 다른 별개의 인스턴스 주소 형성*/
+        bookShelf2[1] = new Book();
+        bookShelf2[2] = new Book();
+        bookShelf2[3] = new Book();
+        bookShelf2[4] = new Book();
 
-        /*배열의 요소를 각각 초기화 하고 출력*/
+        for(int i = 0; i < bookShelf1.length; i++){
+            bookShelf2[i].setBookName(bookShelf1[i].getBookName()); /*bookShelf2의 요소에 bookShelf1의 요소 복사*/
+            bookShelf2[i].setAuthor(bookShelf1[i].getAuthor());
+        }
 
-        for(int i = 0; i < 5; i++){
+        for(int i = 0; i < bookShelf2.length; i++){ /*출력*/
+            bookShelf2[i].showInfo();
+        }
+
+        System.out.println("\n");
+
+        bookShelf1[1].setBookName("오옹 나이스"); /*bookShelf1의 두번째 요소 값 변경*/
+        bookShelf1[1].setAuthor("으시안 오옹");
+
+        for(int i = 0; i < bookShelf2.length; i++){ /*출력*/
+            bookShelf2[i].showInfo();
+        }
+
+        System.out.println("\n");
+ 
+        for(int i = 0; i < bookShelf1.length; i++){ /*출력*/ 
             bookShelf1[i].showInfo();
         }
-
-        System.out.println("\n");
-        
-        for(int i = 0; i < 5; i++){
-            bookShelf2[i].showInfo();
-        }
-
-        /*bookShelf1[0].author = "응응응"; Book 클래스의 맴버변수를 private로 선언하여 클래스 내부에서만 접근이 가능하여 오류발생*/
-        bookShelf1[0].setAuthor("응응응");
-        bookShelf1[0].setBookName("오옹 나이스"); /*메서드를 이용하여 bookSelf의 책 이름과 저자 값을 변경함.*/
-
-        System.out.println("\n");
-
-        for(int i = 0; i < 5; i++){ /*bookShelf2를 출력함. 근데 첫요소의 값이 bookSelf1의 값과 똑같이 나옴*/
-            bookShelf2[i].showInfo();
-        }
-
-        /*이러한 상황은 배열의 자리는 인스턴스가 아닌 인스턴스의 주소 값을 가리키기 때문에 복사를 진행해도 주소 값이 복사가 되는 것
-        이러한 이유로 한쪽 값을 변경하면 복사한 다른 쪽도 영향을 받는다.*/
-
     }
 }
+
+
+/*위의 복사는 한쪽의 값을 변경해도 복사한 다른쪽의 값이 변경이 되지 않는다.
+이는 우의 디폴트 생성자로 인스턴스를 형성할 때 기존의 인스턴스의 주소를 이용하는 것이 아닌
+새로운 인스턴스를 힙에 형성하기에 주소 값을 공유하지 않는 것으로 각각의 배열이 서로 독립적으로 사용이 가능하다.*/
