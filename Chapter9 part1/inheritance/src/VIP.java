@@ -18,6 +18,12 @@ public class VIP extends Customer{ /*extends 예약어로 Customer 클래스를 상속 받�
         System.out.println("VIP() 생성자 호출");
     }
 
+    @Override /*애노테이션: 컴파일러에 정보를 제공, 메서드가 재정의 됨을 알려줌, 표준 애노테이션과 메타 애노테이션이 존재*/
+    public int calcPrice(int price){
+        bonusPoint += bonusRatio * price;
+        return (int)(price - saleRatio*price);
+    }
+
     public int getAgentID(){
         return agentID;
     }
