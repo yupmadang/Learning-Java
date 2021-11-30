@@ -12,16 +12,19 @@ public class App {
         System.out.println(calc.substract(num1, num2));
         System.out.println(calc.times(num1, num2));
         System.out.println(calc.divid(num1, num2));
+        calc.description();
         System.out.println("======CalculatorÇü=====");
         System.out.println(calc2.add(num1, num2));
         System.out.println(calc2.substract(num1, num2));
         System.out.println(calc2.times(num1, num2));
         System.out.println(calc2.divid(num1, num2));
+        calc2.description();
         System.out.println("======CalcÇü=====");
         System.out.println(calc3.add(num1, num2));
         System.out.println(calc3.substract(num1, num2));
         System.out.println(calc3.times(num1, num2));
         System.out.println(calc3.divid(num1, num2));
+        calc3.description();
     }
 }
 
