@@ -4,7 +4,7 @@ public abstract class Car{
     public abstract void stop();
     public abstract void turnoff();
 
-    final void run(){ /*íƒ¬í”Œë¦¿ ë©”ì„œë“œ ì„ ì–¸: ë¡œì§ ë³€ê²½ì´ ë¶ˆê°€ëŠ¥í•¨*/
+    final void run(){ /*ÅÆÇÃ¸´ ¸Ş¼­µå ¼±¾ğ: ·ÎÁ÷ º¯°æÀÌ ºÒ°¡´ÉÇÔ*/
         start();
         drive();
         stop();

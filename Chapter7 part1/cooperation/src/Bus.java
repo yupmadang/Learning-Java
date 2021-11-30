@@ -3,11 +3,11 @@ public class Bus {
     int money;
     int passengerCount;
 
-    public Bus (int busNum){
+    public Bus (int busNum){ /*busNum을 배개변수로 하는 Bus 생성자*/
         this.busNum = busNum;
     }
 
-    public void take (int money){
+    public void take (int money){ /*버스의 승객과 수입을 계산해주는 메서드*/
         this.money += money;
         passengerCount++;
     }

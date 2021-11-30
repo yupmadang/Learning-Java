@@ -25,6 +25,9 @@ public class App {
         System.out.println(calc3.times(num1, num2));
         System.out.println(calc3.divid(num1, num2));
         calc3.description();
+
+        int arr[] = {1, 2, 3, 4, 5};
+        System.out.println(Calc.total(arr));
     }
 }
 

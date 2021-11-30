@@ -39,6 +39,10 @@ public class App {
         for(int i = 0; i < bookShelf1.length; i++){ /*Ãâ·Â*/ 
             bookShelf1[i].showInfo();
         }
+
+        System.out.println("\n");
+        System.out.println(bookShelf1[1].getBookName());
+        System.out.println(bookShelf1[1+1].getBookName());
     }
 }
 

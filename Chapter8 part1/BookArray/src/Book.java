@@ -16,7 +16,7 @@ public class Book {
         return bookName;
     }
 
-    public void setBookName(String bookName){ /*외부에서 값을 변경 할 수 있도록 ser메서드 선언*/
+    public void setBookName(String bookName){ /*외부에서 값을 변경 할 수 있도록 set메서드 선언*/
         this.bookName = bookName;
     }
 
